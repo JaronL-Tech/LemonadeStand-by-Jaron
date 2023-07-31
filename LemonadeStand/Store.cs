@@ -19,7 +19,7 @@ namespace LemonadeStand
         {
             pricePerLemon = .5;
             pricePerSugarCube = .1;
-            pricePerIceCube = .01;
+            pricePerIceCube = .1;
             pricePerCup = .25;
         }
 

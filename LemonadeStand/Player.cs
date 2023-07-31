@@ -22,6 +22,16 @@ namespace LemonadeStand
         }
 
         // member methods (CAN DO)
-
+        public void DisplayInventory()
+        {
+            var items = Inventory.Display();
+            Console.WriteLine("Here's your stock!");
+            foreach (var item in items)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("Here's your money!");
+            Console.WriteLine("Money : $" + wallet.Money + "");
+        }
     }
 }

@@ -30,7 +30,7 @@ namespace LemonadeStand
         // member methods (CAN DO)
         public void AddLemonsToInventory(int numberOfLemons)
         {
-            for(int i = 0; i < numberOfLemons; i++)
+            for (int i = 0; i < numberOfLemons; i++)
             {
                 Lemon lemon = new Lemon();
                 lemons.Add(lemon);
@@ -39,7 +39,7 @@ namespace LemonadeStand
 
         public void AddSugarCubesToInventory(int numberOfSugarCubes)
         {
-            for(int i = 0; i < numberOfSugarCubes; i++)
+            for (int i = 0; i < numberOfSugarCubes; i++)
             {
                 SugarCube sugarCube = new SugarCube();
                 sugarCubes.Add(sugarCube);
@@ -48,7 +48,7 @@ namespace LemonadeStand
 
         public void AddIceCubesToInventory(int numberOfIceCubes)
         {
-            for(int i = 0; i < numberOfIceCubes; i++)
+            for (int i = 0; i < numberOfIceCubes; i++)
             {
                 IceCube iceCube = new IceCube();
                 iceCubes.Add(iceCube);
@@ -57,13 +57,22 @@ namespace LemonadeStand
 
         public void AddCupsToInventory(int numberOfCups)
         {
-            for(int i = 0; i < numberOfCups; i++)
+            for (int i = 0; i < numberOfCups; i++)
             {
                 Cup cup = new Cup();
                 cups.Add(cup);
             }
         }
 
+        public Dictionary<string, int> Display()
+        {
+            return new Dictionary<string, int>() {
+                { "lemons", lemons.Count },
+                { "sugarCubes", sugarCubes.Count },
+                { "iceCubes", iceCubes.Count },
+                { "cups", cups.Count }
+            };
+        }
 
     }
 }
