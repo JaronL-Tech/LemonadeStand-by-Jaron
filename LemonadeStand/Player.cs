@@ -24,7 +24,7 @@ namespace LemonadeStand
         // member methods (CAN DO)
         public void DisplayInventory()
         {
-            var items = Inventory.Display();
+            var items = inventory.Display();
             Console.WriteLine("Here's your stock!");
             foreach (var item in items)
             {
