@@ -58,5 +58,33 @@ public class Customer
         double finalPrice = (pricePerLemon + pricePerSugarCube + pricePerIceCube + pricePerCup) * adjustedDemand;
         return finalPrice;
     }
+    public class Consumer
+{
+    private double willingnessToPay;
+    private double purchaseChance;
+
+    public Customer(double willingnessToPay, double purchaseChance)
+    {
+        this.willingnessToPay = willingnessToPay;
+        this.purchaseChance = purchaseChance;
+    }
+
+    // Method to check if the customer decides to buy a glass of lemonade.
+    public bool DecideToBuy()
+    {
+        
+        double randomValue = new Random().NextDouble();
+
+        
+        return randomValue <= purchaseChance;
+    }
+
+    // Method to get the customer's willingness to pay for a glass of lemonade.
+    public double GetWillingnessToPay()
+    {
+        return willingnessToPay;
+    }
+}
+
 }
 

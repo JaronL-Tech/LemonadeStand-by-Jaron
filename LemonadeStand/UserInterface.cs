@@ -52,12 +52,12 @@ namespace LemonadeStand
 
                 var response = Console.ReadLine();
 
-                if ("YES") 
+                if (response == "Yes") 
                 {
                     userInputIsCorrectFormat = true;
                     goShopping = true;
                 }
-                else if ("NO") 
+                else if (response == "NO") 
                 {
                     userInputIsCorrectFormat = true;
                     goShopping = false;
