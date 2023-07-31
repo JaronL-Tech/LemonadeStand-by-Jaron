@@ -40,5 +40,36 @@ namespace LemonadeStand
             return quantityOfItem;
         }
 
+        public static bool StoreConfirmation()
+        {
+            bool userInputIsCorrectFormat = false;
+            bool goShopping = false;
+
+            while (!userInputIsCorrectFormat)
+            {
+                Console.WriteLine("Would you like to go shopping?\r\n");
+                Console.WriteLine("Please answer by Yes  or No \r");
+
+                var response = Console.ReadLine();
+
+                if ("YES") 
+                {
+                    userInputIsCorrectFormat = true;
+                    goShopping = true;
+                }
+                else if ("NO") 
+                {
+                    userInputIsCorrectFormat = true;
+                    goShopping = false;
+                }
+                else
+                {
+                    Console.WriteLine("Please answer by Yes or No");
+                }
+            }
+
+            return goShopping;
+        }
+
     }
 }
