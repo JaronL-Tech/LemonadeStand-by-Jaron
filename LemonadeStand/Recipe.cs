@@ -29,6 +29,14 @@ namespace LemonadeStand
         {
             Console.WriteLine($"Your recipe currently consists of:\n{numberOfLemons} lemons per pitcher\n{numberOfSugarCubes} sugar cubes per pitcher\n{numberOfIceCubes} ice cubes per pitcher");
         }
-
+        static int GetIntegerInput()
+        {
+            int value;
+            while (!int.TryParse(Console.ReadLine(), out value) || value < 0)
+            {
+                Console.Write("Invalid input. Please enter a positive integer: ");
+            }
+            return value;
+        }
     }
 }

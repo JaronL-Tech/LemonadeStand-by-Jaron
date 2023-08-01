@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace LemonadeStand
 {
-    internal class Lemons
+    
+     public void Lemons()
     {
+        Console.WriteLine("Welcome to Lemonade Recipe Creator!Please enter the amount of lemons");
+
+        Console.Write("Enter the number of lemons: ");
+        int lemons = GetIntegerInput();
+        Console.WriteLine($"Lemons: {lemons}");
+
     }
 }
